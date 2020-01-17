@@ -3,12 +3,20 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest
+import string
+import random
 from group import Group
+from person import Person
 
 days = [i for i in range(1, 32)]
 months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November",
           "December"]
 years = [i for i in range(1970, 2000)]
+
+
+def generate_chars_sequence(size, seq):
+    return ''.join(random.choice(seq) for _ in range(size))
+
 
 class TestAddGroup(unittest.TestCase):
     def setUp(self):
@@ -69,15 +77,19 @@ class TestAddGroup(unittest.TestCase):
         wd.get("https://localhost/addressbook/")
 
     def is_element_present(self, how, what):
-        try: self.wd.find_element(by=how, value=what)
-        except NoSuchElementException as e: return False
+        try:
+            self.wd.find_element(by=how, value=what)
+        except NoSuchElementException as e:
+            return False
         return True
-    
+
     def is_alert_present(self):
-        try: self.wd.switch_to_alert()
-        except NoAlertPresentException as e: return False
+        try:
+            self.wd.switch_to_alert()
+        except NoAlertPresentException as e:
+            return False
         return True
-    
+
     def tearDown(self):
         self.wd.quit()
 
@@ -86,83 +98,106 @@ class TestAddGroup(unittest.TestCase):
         self.open_home_page(wd)
         self.login(wd, username="admin", password="secret")
         self.open_person(wd)
-        self.input_person_data(wd)
-
+        pers = Person(firstname=generate_chars_sequence(20, string.ascii_letters),
+                      middlename=generate_chars_sequence(20, string.ascii_letters),
+                      lastname=generate_chars_sequence(20, string.ascii_letters),
+                      nickname=generate_chars_sequence(20, string.ascii_letters),
+                      title=generate_chars_sequence(20, string.ascii_letters),
+                      company=generate_chars_sequence(20, string.ascii_letters),
+                      address=generate_chars_sequence(20, string.ascii_letters),
+                      home=generate_chars_sequence(2, string.digits),
+                      mobile=generate_chars_sequence(11, string.digits),
+                      work=generate_chars_sequence(20, string.ascii_letters),
+                      fax=generate_chars_sequence(11, string.digits),
+                      email=generate_chars_sequence(20, string.ascii_letters),
+                      email2=generate_chars_sequence(20, string.ascii_letters),
+                      email3=generate_chars_sequence(20, string.ascii_letters),
+                      homepage=generate_chars_sequence(20, string.ascii_letters),
+                      bday=random.choice(days),
+                      bmonth=random.choice(months),
+                      byear=random.choice(years),
+                      aday=random.choice(days),
+                      amonth=random.choice(months),
+                      ayear=random.choice(years),
+                      address2=generate_chars_sequence(20, string.ascii_letters),
+                      phone2=generate_chars_sequence(11, string.digits),
+                      notes=generate_chars_sequence(50, string.ascii_letters))
+        self.input_person_data(wd, pers)
         self.return_to_home_page(wd)
         self.logout(wd)
 
     def return_to_home_page(self, wd):
         wd.find_element_by_link_text("home page").click()
 
-    def input_person_data(self, wd):
+    def input_person_data(self, wd, pers):
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys("first name")
+        wd.find_element_by_name("firstname").send_keys(pers.firstname)
         wd.find_element_by_name("middlename").clear()
-        wd.find_element_by_name("middlename").send_keys("Middle name")
+        wd.find_element_by_name("middlename").send_keys(pers.middlename)
         wd.find_element_by_name("lastname").click()
         wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys("last name")
+        wd.find_element_by_name("lastname").send_keys(pers.lastname)
         wd.find_element_by_name("nickname").click()
         wd.find_element_by_name("nickname").clear()
-        wd.find_element_by_name("nickname").send_keys("nickname")
+        wd.find_element_by_name("nickname").send_keys(pers.nickname)
         wd.find_element_by_name("title").click()
         wd.find_element_by_name("title").clear()
-        wd.find_element_by_name("title").send_keys("title")
+        wd.find_element_by_name("title").send_keys(pers.title)
         wd.find_element_by_name("company").click()
         wd.find_element_by_name("company").clear()
-        wd.find_element_by_name("company").send_keys("company")
+        wd.find_element_by_name("company").send_keys(pers.company)
         wd.find_element_by_name("address").click()
         wd.find_element_by_name("address").clear()
-        wd.find_element_by_name("address").send_keys("address")
+        wd.find_element_by_name("address").send_keys(pers.address)
         wd.find_element_by_name("home").click()
         wd.find_element_by_name("home").clear()
-        wd.find_element_by_name("home").send_keys("home telephone")
+        wd.find_element_by_name("home").send_keys(pers.home)
         wd.find_element_by_name("mobile").click()
         wd.find_element_by_name("mobile").clear()
-        wd.find_element_by_name("mobile").send_keys("mobile telephone")
+        wd.find_element_by_name("mobile").send_keys(pers.mobile)
         wd.find_element_by_name("work").click()
         wd.find_element_by_name("work").clear()
-        wd.find_element_by_name("work").send_keys("work telephone")
+        wd.find_element_by_name("work").send_keys(pers.work)
         wd.find_element_by_name("fax").click()
         wd.find_element_by_name("fax").clear()
-        wd.find_element_by_name("fax").send_keys("fax")
+        wd.find_element_by_name("fax").send_keys(pers.fax)
         wd.find_element_by_name("email").click()
         wd.find_element_by_name("email").clear()
-        wd.find_element_by_name("email").send_keys("e-mail1")
+        wd.find_element_by_name("email").send_keys(pers.email)
         wd.find_element_by_name("email2").click()
         wd.find_element_by_name("email2").clear()
-        wd.find_element_by_name("email2").send_keys("email2")
+        wd.find_element_by_name("email2").send_keys(pers.email2)
         wd.find_element_by_name("email3").click()
         wd.find_element_by_name("email3").clear()
-        wd.find_element_by_name("email3").send_keys("email3")
+        wd.find_element_by_name("email3").send_keys(pers.email3)
         wd.find_element_by_name("homepage").click()
         wd.find_element_by_name("homepage").clear()
-        wd.find_element_by_name("homepage").send_keys("homepage")
+        wd.find_element_by_name("homepage").send_keys(pers.homepage)
         wd.find_element_by_name("bday").click()
-        wd.find_element_by_name("bday").send_keys("15")
+        wd.find_element_by_name("bday").send_keys("%s" % pers.bday)
         wd.find_element_by_name("bmonth").click()
-        wd.find_element_by_name("bmonth").send_keys("February")
+        wd.find_element_by_name("bmonth").send_keys("%s" % pers.bmonth)
         wd.find_element_by_name("byear").click()
         wd.find_element_by_name("byear").clear()
-        wd.find_element_by_name("byear").send_keys("1990")
+        wd.find_element_by_name("byear").send_keys(pers.byear)
         wd.find_element_by_name("aday").click()
         wd.find_element_by_name("aday").click()
-        wd.find_element_by_name("aday").send_keys("15")
+        wd.find_element_by_name("aday").send_keys("%s" % pers.aday)
         wd.find_element_by_name("amonth").click()
-        wd.find_element_by_name("amonth").send_keys("February")
+        wd.find_element_by_name("amonth").send_keys("%s" % pers.amonth)
         wd.find_element_by_name("ayear").click()
         wd.find_element_by_name("ayear").clear()
-        wd.find_element_by_name("ayear").send_keys("2002")
+        wd.find_element_by_name("ayear").send_keys(pers.ayear)
         wd.find_element_by_name("address2").click()
         wd.find_element_by_name("address2").clear()
-        wd.find_element_by_name("address2").send_keys("adr")
+        wd.find_element_by_name("address2").send_keys(pers.address2)
         wd.find_element_by_name("phone2").click()
         wd.find_element_by_name("phone2").clear()
-        wd.find_element_by_name("phone2").send_keys("second home")
+        wd.find_element_by_name("phone2").send_keys(pers.phone2)
         wd.find_element_by_name("notes").click()
         wd.find_element_by_name("notes").clear()
-        wd.find_element_by_name("notes").send_keys("second note")
+        wd.find_element_by_name("notes").send_keys(pers.notes)
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
 
     def open_person(self, wd):
