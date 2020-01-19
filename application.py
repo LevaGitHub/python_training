@@ -50,7 +50,7 @@ class Application:
         wd = self.wd
         wd.find_element_by_link_text("home page").click()
 
-    def open_person(self):
+    def open_person_page(self):
         wd = self.wd
         wd.find_element_by_link_text("add new").click()
 
