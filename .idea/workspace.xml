@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b275ddd2-9dac-4aa5-95b8-c42644fad2f5" name="Default" comment="Добавление контакта&#10;&#10;Заполнение данных контакта ведется рандомным способом">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="b275ddd2-9dac-4aa5-95b8-c42644fad2f5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_add_group.py" afterPath="$PROJECT_DIR$/test_add_group.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,11 +47,21 @@
       <file leaf-file-name="test_add_group.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_add_group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="208" column="0" lean-forward="true" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
               <folding>
                 <element signature="e#24#54#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -119,6 +128,7 @@
         <option value="$PROJECT_DIR$/group.py" />
         <option value="$PROJECT_DIR$/person.py" />
         <option value="$PROJECT_DIR$/../PKM/tst.py" />
+        <option value="$PROJECT_DIR$/application.py" />
         <option value="$PROJECT_DIR$/test_add_group.py" />
       </list>
     </option>
@@ -380,16 +390,24 @@
       <option name="project" value="LOCAL" />
       <updated>1579300306268</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Ссылка на драйвер вынесена во вспомогательные методы">
+      <created>1579457792514</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1579457792514</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Вспомогательные методы вынесены в класс Application">
+      <created>1579459329065</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1579459329065</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_add_group_py - 2020.01.18 at 00h 22m 15s.xml">
-      <configuration name="Unittests in test_add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_add_group_py - 2020.01.18 at 00h 22m 42s.xml">
-      <configuration name="Unittests in test_add_group.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_test_add_group_py - 2020.01.18 at 00h 35m 28s.xml">
       <configuration name="Unittests in test_add_group.py" configurationId="tests" />
     </history-entry>
@@ -412,6 +430,12 @@
       <configuration name="Unittests in test_add_group.py" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_test_add_group_py - 2020.01.19 at 21h 15m 22s.xml">
+      <configuration name="Unittests in test_add_group.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_add_group_py - 2020.01.19 at 21h 40m 36s.xml">
+      <configuration name="Unittests in test_add_group.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_add_group_py - 2020.01.19 at 21h 48m 09s.xml">
       <configuration name="Unittests in test_add_group.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -452,7 +476,9 @@
     <MESSAGE value="Добавлен тест создания группы с пустыми значениями" />
     <MESSAGE value="Перенесен тест добавления контакта" />
     <MESSAGE value="Добавление контакта&#10;&#10;Заполнение данных контакта ведется рандомным способом" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление контакта&#10;&#10;Заполнение данных контакта ведется рандомным способом" />
+    <MESSAGE value="Ссылка на драйвер вынесена во вспомогательные методы" />
+    <MESSAGE value="Вспомогательные методы вынесены в класс Application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Вспомогательные методы вынесены в класс Application" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -764,10 +790,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_add_group.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="208" column="0" lean-forward="true" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+        <state relative-caret-position="153">
+          <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding>
             <element signature="e#24#54#0" expanded="true" />
           </folding>
