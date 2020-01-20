@@ -26,7 +26,7 @@ def app(request):
 
 
 def test_add_person(app):
-    app.login(username="admin", password="secret")
+    app.session.login(username="admin", password="secret")
     app.open_person_page()
     pers = Person(firstname=generate_chars_sequence(20, string.ascii_letters),
                   middlename=generate_chars_sequence(20, string.ascii_letters),
@@ -54,4 +54,4 @@ def test_add_person(app):
                   notes=generate_chars_sequence(50, string.ascii_letters))
     app.input_person_data(pers)
     app.return_to_home_page()
-    app.logout()
+    app.session.logout()
