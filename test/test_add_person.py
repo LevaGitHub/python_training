@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 
-import pytest
-import string
 import random
-from person import Person
-from application import Application
+import string
+
+import pytest
+
+from fixture.application import Application
+from model.person import Person
 
 days = [i for i in range(1, 32)]
 months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November",
