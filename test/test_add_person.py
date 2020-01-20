@@ -2,8 +2,6 @@
 
 import random
 import string
-import pytest
-from fixture.application import Application
 from model.person import Person
 
 days = [i for i in range(1, 32)]
@@ -14,13 +12,6 @@ years = [i for i in range(1970, 2000)]
 
 def generate_chars_sequence(size, seq):
     return ''.join(random.choice(seq) for _ in range(size))
-
-
-@pytest.fixture
-def app(request):
-    fixture = Application()
-    request.addfinalizer(fixture.destroy)
-    return fixture
 
 
 def test_add_person(app):
