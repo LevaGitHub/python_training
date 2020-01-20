@@ -2,9 +2,7 @@
 
 import random
 import string
-
 import pytest
-
 from fixture.application import Application
 from model.person import Person
 
@@ -27,7 +25,7 @@ def app(request):
 
 def test_add_person(app):
     app.session.login(username="admin", password="secret")
-    app.open_person_page()
+    app.person.open_person_page()
     pers = Person(firstname=generate_chars_sequence(20, string.ascii_letters),
                   middlename=generate_chars_sequence(20, string.ascii_letters),
                   lastname=generate_chars_sequence(20, string.ascii_letters),
@@ -52,6 +50,6 @@ def test_add_person(app):
                   address2=generate_chars_sequence(20, string.ascii_letters),
                   phone2=generate_chars_sequence(11, string.digits),
                   notes=generate_chars_sequence(50, string.ascii_letters))
-    app.input_person_data(pers)
-    app.return_to_home_page()
+    app.person.input_person_data(pers)
+    app.person.return_to_home_page()
     app.session.logout()
