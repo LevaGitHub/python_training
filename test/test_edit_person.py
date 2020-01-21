@@ -1,11 +1,9 @@
-# -*- coding: utf-8 -*-
-
 import string
 import fixture.general as general
 from model.person import Person
 
 
-def test_add_person(app):
+def test_edit_person(app):
     app.session.login(username="admin", password="secret")
     pers = Person(firstname=general.generate_chars_sequence(20, string.ascii_letters),
                   middlename=general.generate_chars_sequence(20, string.ascii_letters),
@@ -31,5 +29,5 @@ def test_add_person(app):
                   address2=general.generate_chars_sequence(20, string.ascii_letters),
                   phone2=general.generate_chars_sequence(11, string.digits),
                   notes=general.generate_chars_sequence(50, string.ascii_letters))
-    app.person.create(pers)
+    app.person.edit_first_person(pers)
     app.session.logout()

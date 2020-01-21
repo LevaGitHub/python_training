@@ -3,7 +3,6 @@ from fixture.session import SessionHelper
 from fixture.group import GroupHelper
 from fixture.person import PersonHelper
 
-
 class Application:
 
     def __init__(self):
