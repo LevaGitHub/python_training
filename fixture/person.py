@@ -3,9 +3,13 @@ class PersonHelper:
     def __init__(self, app):
         self.app = app
 
-    def open_person_page(self):
+    def open_add_person_page(self):
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
+
+    def open_all_person_page(self):
+        wd = self.app.wd
+        wd.find_element_by_link_text("home").click()
 
     def input_person_data(self, pers):
         wd = self.app.wd
@@ -78,6 +82,13 @@ class PersonHelper:
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys(pers.notes)
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+
+    def delete_first_person(self):
+        wd = self.app.wd
+        self.open_all_person_page()
+        wd.find_element_by_xpath("(//img[@alt='Edit'])[2]").click()
+        wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
+        self.open_all_person_page()
 
     def return_to_home_page(self):
         wd = self.app.wd

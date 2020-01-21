@@ -16,7 +16,7 @@ def generate_chars_sequence(size, seq):
 
 def test_add_person(app):
     app.session.login(username="admin", password="secret")
-    app.person.open_person_page()
+    app.person.open_add_person_page()
     pers = Person(firstname=generate_chars_sequence(20, string.ascii_letters),
                   middlename=generate_chars_sequence(20, string.ascii_letters),
                   lastname=generate_chars_sequence(20, string.ascii_letters),
