@@ -4,7 +4,6 @@ from model.person import Person
 
 
 def test_edit_person(app):
-    app.session.login(username="admin", password="secret")
     pers = Person(firstname=general.generate_chars_sequence(20, string.ascii_letters),
                   middlename=general.generate_chars_sequence(20, string.ascii_letters),
                   lastname=general.generate_chars_sequence(20, string.ascii_letters),
@@ -30,4 +29,3 @@ def test_edit_person(app):
                   phone2=general.generate_chars_sequence(11, string.digits),
                   notes=general.generate_chars_sequence(50, string.ascii_letters))
     app.person.edit_first_person(pers)
-    app.session.logout()
