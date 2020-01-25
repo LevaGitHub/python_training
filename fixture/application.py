@@ -3,6 +3,7 @@ from fixture.session import SessionHelper
 from fixture.group import GroupHelper
 from fixture.person import PersonHelper
 
+
 class Application:
 
     def __init__(self):
@@ -18,3 +19,16 @@ class Application:
 
     def destroy(self):
         self.wd.quit()
+
+    def set_textbox_value(self, textbox_name, value):
+        wd = self.wd
+        if value is not None:
+            wd.find_element_by_name(textbox_name).click()
+            wd.find_element_by_name(textbox_name).clear()
+            wd.find_element_by_name(textbox_name).send_keys(value)
+
+    def select_combobox_value(self, combobox_name, value):
+        wd = self.wd
+        if value is not None:
+            wd.find_element_by_name(combobox_name).click()
+            wd.find_element_by_name(combobox_name).send_keys(value)
