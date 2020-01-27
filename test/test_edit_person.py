@@ -4,6 +4,8 @@ from model.person import Person
 
 
 def test_edit_person(app):
+    if app.person.count() == 0:
+        app.person.create(Person(firstname='please', middlename='edit', lastname='me'))
     pers = Person(firstname=general.generate_chars_sequence(20, string.ascii_letters),
                   middlename=general.generate_chars_sequence(20, string.ascii_letters),
                   lastname=general.generate_chars_sequence(20, string.ascii_letters),

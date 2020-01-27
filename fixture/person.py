@@ -47,14 +47,14 @@ class PersonHelper:
     def delete_first_person(self):
         wd = self.app.wd
         self.open_all_person_page()
-        wd.find_element_by_xpath("(//img[@alt='Edit'])[2]").click()
+        wd.find_element_by_xpath("// img[ @ alt = 'Edit']").click()
         wd.find_element_by_xpath("(//input[@name='update'])[3]").click()
         self.open_all_person_page()
 
     def edit_first_person(self, edited_person):
         wd = self.app.wd
         self.open_all_person_page()
-        wd.find_element_by_xpath("(//img[@alt='Edit'])[2]").click()
+        wd.find_element_by_xpath("// img[ @ alt = 'Edit']").click()
         self.input_person_data(edited_person)
         wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
         self.open_all_person_page()
@@ -62,3 +62,9 @@ class PersonHelper:
     def return_to_home_page(self):
         wd = self.app.wd
         wd.find_element_by_link_text("home page").click()
+
+    def count(self):
+        wd = self.app.wd
+        self.open_all_person_page()
+        return len(wd.find_elements_by_name("selected[]"))
+
