@@ -3,12 +3,14 @@ from fixture.session import SessionHelper
 from fixture.group import GroupHelper
 from fixture.person import PersonHelper
 
+waiting_time = 5
+
 
 class Application:
 
     def __init__(self):
         self.wd = webdriver.Firefox()
-        self.wd.implicitly_wait(30)
+        self.wd.implicitly_wait(waiting_time)
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
         self.person = PersonHelper(self)
