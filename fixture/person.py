@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 class PersonHelper:
 
     def __init__(self, app):
@@ -9,7 +12,10 @@ class PersonHelper:
 
     def open_all_person_page(self):
         wd = self.app.wd
-        wd.find_element_by_link_text("home").click()
+        # открываем форму если url не заканчивается на 'addressbook/' и
+        # количество уникальных для формы "home" элементов = 0, значит мы не на главной сранице
+        if wd.current_url[-12:] != 'addressbook/' and len(wd.find_elements_by_xpath('//*[@id="maintable"]')) == 0:
+            wd.find_element_by_link_text("home").click()
 
     def create(self, person):
         wd = self.app.wd

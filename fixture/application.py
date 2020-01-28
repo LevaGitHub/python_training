@@ -3,7 +3,7 @@ from fixture.session import SessionHelper
 from fixture.group import GroupHelper
 from fixture.person import PersonHelper
 
-waiting_time = 5
+waiting_time = 1
 
 
 class Application:
