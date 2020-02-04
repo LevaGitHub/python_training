@@ -11,11 +11,15 @@ def checking_preconditions_before_edit(app):
 def test_edit_first_group_name(app):
     checking_preconditions_before_edit(app)
     old_groups = app.group.get_group_list()
-    app.group.edit_first_group(Group(name="edited_name"))
+    edited_group = Group(name="edited_name")
+    edited_group.id = old_groups[0].id
+    app.group.edit_first_group(edited_group)
     new_groups = app.group.get_group_list()
     assert len(old_groups) == len(new_groups)
+    old_groups[0] = edited_group
+    assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)
 
-
+'''
 def test_edit_first_group_header(app):
     checking_preconditions_before_edit(app)
     old_groups = app.group.get_group_list()
@@ -30,3 +34,4 @@ def test_edit_first_group_footer(app):
     app.group.edit_first_group(Group(footer="edited_group_footer"))
     new_groups = app.group.get_group_list()
     assert len(old_groups) == len(new_groups)
+'''
