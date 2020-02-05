@@ -30,4 +30,9 @@ def test_add_person(app):
                   address2=general.generate_chars_sequence(20, string.ascii_letters),
                   phone2=general.generate_chars_sequence(11, string.digits),
                   notes=general.generate_chars_sequence(50, string.ascii_letters))
+    old_persons = app.person.get_person_list()
     app.person.create(pers)
+    new_persons = app.person.get_person_list()
+    assert len(old_persons) + 1 == len(new_persons)
+    old_persons.append(pers)
+    assert sorted(old_persons, key=Person.id_or_max) == sorted(new_persons, key=Person.id_or_max)

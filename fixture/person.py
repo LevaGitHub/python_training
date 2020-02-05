@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from model.person import  Person
 
 class PersonHelper:
 
@@ -73,4 +74,20 @@ class PersonHelper:
         wd = self.app.wd
         self.open_all_person_page()
         return len(wd.find_elements_by_name("selected[]"))
+
+    def get_person_list(self):
+        wd = self.app.wd
+        self.open_all_person_page()
+        persons = []
+        rows = wd.find_elements_by_name("entry")
+        for each in rows:
+            columns = each.find_elements_by_css_selector("td")
+            column_id = columns[0]
+            person_id = column_id.find_element_by_name('selected[]').get_attribute("value")
+            column_lastname = columns[1]
+            lastname = column_lastname.text
+            column_firstname = columns[2]
+            firstname = column_firstname.text
+            persons.append(Person(firstname=firstname, lastname=lastname, person_id=person_id))
+        return persons
 
