@@ -14,8 +14,8 @@ def test_edit_first_group_name(app):
     edited_group = Group(name="edited_name")
     edited_group.id = old_groups[0].id
     app.group.edit_first_group(edited_group)
+    assert len(old_groups) == app.group.count()
     new_groups = app.group.get_group_list()
-    assert len(old_groups) == len(new_groups)
     old_groups[0] = edited_group
     assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)
 
