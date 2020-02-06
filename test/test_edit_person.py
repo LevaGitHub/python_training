@@ -33,7 +33,7 @@ def test_edit_person(app):
     old_persons = app.person.get_person_list()
     pers.person_id = old_persons[0].person_id
     app.person.edit_first_person(pers)
+    assert len(old_persons) == app.person.count()
     new_persons = app.person.get_person_list()
-    assert len(old_persons) == len(new_persons)
     old_persons[0] = pers
     assert sorted(old_persons, key=Person.id_or_max) == sorted(new_persons, key=Person.id_or_max)

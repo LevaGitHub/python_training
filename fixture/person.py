@@ -2,6 +2,7 @@
 
 from model.person import  Person
 
+
 class PersonHelper:
 
     def __init__(self, app):
@@ -24,6 +25,7 @@ class PersonHelper:
         self.input_person_data(person)
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
         self.return_to_home_page()
+        self.person_cache = None
 
     def input_person_data(self, pers):
         self.app.set_textbox_value("firstname", pers.firstname)
@@ -57,6 +59,7 @@ class PersonHelper:
         wd.find_element_by_xpath("// img[ @ alt = 'Edit']").click()
         wd.find_element_by_xpath("(//input[@name='update'])[3]").click()
         self.open_all_person_page()
+        self.person_cache = None
 
     def edit_first_person(self, edited_person):
         wd = self.app.wd
@@ -65,6 +68,7 @@ class PersonHelper:
         self.input_person_data(edited_person)
         wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
         self.open_all_person_page()
+        self.person_cache = None
 
     def return_to_home_page(self):
         wd = self.app.wd
@@ -75,19 +79,22 @@ class PersonHelper:
         self.open_all_person_page()
         return len(wd.find_elements_by_name("selected[]"))
 
+    person_cache = None
+
     def get_person_list(self):
-        wd = self.app.wd
-        self.open_all_person_page()
-        persons = []
-        rows = wd.find_elements_by_name("entry")
-        for each in rows:
-            columns = each.find_elements_by_css_selector("td")
-            column_id = columns[0]
-            person_id = column_id.find_element_by_name('selected[]').get_attribute("value")
-            column_lastname = columns[1]
-            lastname = column_lastname.text
-            column_firstname = columns[2]
-            firstname = column_firstname.text
-            persons.append(Person(firstname=firstname, lastname=lastname, person_id=person_id))
-        return persons
+        if self.person_cache is None:
+            wd = self.app.wd
+            self.open_all_person_page()
+            self.person_cache = []
+            rows = wd.find_elements_by_name("entry")
+            for each in rows:
+                columns = each.find_elements_by_css_selector("td")
+                column_id = columns[0]
+                person_id = column_id.find_element_by_name('selected[]').get_attribute("value")
+                column_lastname = columns[1]
+                lastname = column_lastname.text
+                column_firstname = columns[2]
+                firstname = column_firstname.text
+                self.person_cache.append(Person(firstname=firstname, lastname=lastname, person_id=person_id))
+        return self.person_cache
 
