@@ -1,6 +1,13 @@
 # -*- coding: utf-8 -*-
 
-from model.person import  Person
+from model.person import Person
+
+
+def get_edit_button_name(index):
+    if index == 0:
+        return "// img[ @ alt = 'Edit']"
+    else:
+        return "(// img[ @ alt = 'Edit'])[{}]".format(index+1)
 
 
 class PersonHelper:
@@ -53,18 +60,22 @@ class PersonHelper:
         self.app.set_textbox_value("phone2", pers.phone2)
         self.app.set_textbox_value("notes", pers.notes)
 
-    def delete_first_person(self):
+    def delete_person_by_index(self, index):
         wd = self.app.wd
         self.open_all_person_page()
-        wd.find_element_by_xpath("// img[ @ alt = 'Edit']").click()
+        self.select_person_by_index(index)
         wd.find_element_by_xpath("(//input[@name='update'])[3]").click()
         self.open_all_person_page()
         self.person_cache = None
 
-    def edit_first_person(self, edited_person):
+    def select_person_by_index(self, index):
+        wd = self.app.wd
+        wd.find_element_by_xpath(get_edit_button_name(index)).click()
+
+    def edit_person_by_index(self, index, edited_person):
         wd = self.app.wd
         self.open_all_person_page()
-        wd.find_element_by_xpath("// img[ @ alt = 'Edit']").click()
+        self.select_person_by_index(index)
         self.input_person_data(edited_person)
         wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
         self.open_all_person_page()

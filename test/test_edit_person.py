@@ -1,6 +1,7 @@
 import string
 import fixture.general as general
 from model.person import Person
+from random import randrange
 
 
 def test_edit_person(app):
@@ -31,9 +32,10 @@ def test_edit_person(app):
                   phone2=general.generate_chars_sequence(11, string.digits),
                   notes=general.generate_chars_sequence(50, string.ascii_letters))
     old_persons = app.person.get_person_list()
-    pers.person_id = old_persons[0].person_id
-    app.person.edit_first_person(pers)
+    index = randrange(len(old_persons))
+    pers.person_id = old_persons[index].person_id
+    app.person.edit_person_by_index(index, pers)
     assert len(old_persons) == app.person.count()
     new_persons = app.person.get_person_list()
-    old_persons[0] = pers
+    old_persons[index] = pers
     assert sorted(old_persons, key=Person.id_or_max) == sorted(new_persons, key=Person.id_or_max)
