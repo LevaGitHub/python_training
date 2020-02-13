@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b275ddd2-9dac-4aa5-95b8-c42644fad2f5" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/test_phones.py" afterPath="$PROJECT_DIR$/test/test_compare_displayed_person_data.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fixture/person.py" afterPath="$PROJECT_DIR$/fixture/person.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fixture/session.py" afterPath="$PROJECT_DIR$/fixture/session.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/person.py" afterPath="$PROJECT_DIR$/model/person.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="person.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="person.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/person.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state relative-caret-position="-119">
+              <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -37,12 +37,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_phones.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/test_phones.py">
+      <file leaf-file-name="test_compare_displayed_person_data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_compare_displayed_person_data.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="27" />
-              <folding />
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,8 +52,8 @@
       <file leaf-file-name="person.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixture/person.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="129" column="52" lean-forward="true" selection-start-line="129" selection-start-column="52" selection-end-line="129" selection-end-column="52" />
+            <state relative-caret-position="102">
+              <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
               <folding>
                 <element signature="e#25#56#0" expanded="true" />
               </folding>
@@ -72,8 +74,8 @@
       <file leaf-file-name="test_del_person.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_del_person.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+            <state relative-caret-position="136">
+              <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="9" selection-end-column="39" />
               <folding>
                 <element signature="e#24#55#0" expanded="true" />
               </folding>
@@ -163,12 +165,13 @@
         <option value="$PROJECT_DIR$/test/test_edit_group.py" />
         <option value="$PROJECT_DIR$/fixture/group.py" />
         <option value="$PROJECT_DIR$/test/test_del_first_person.py" />
-        <option value="$PROJECT_DIR$/test/test_del_person.py" />
         <option value="$PROJECT_DIR$/test/test_edit_person.py" />
         <option value="$PROJECT_DIR$/fixture/session.py" />
-        <option value="$PROJECT_DIR$/fixture/person.py" />
-        <option value="$PROJECT_DIR$/model/person.py" />
         <option value="$PROJECT_DIR$/test/test_phones.py" />
+        <option value="$PROJECT_DIR$/test/test_del_person.py" />
+        <option value="$PROJECT_DIR$/model/person.py" />
+        <option value="$PROJECT_DIR$/fixture/person.py" />
+        <option value="$PROJECT_DIR$/test/test_compare_displayed_person_data.py" />
       </list>
     </option>
   </component>
@@ -280,7 +283,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.py.test for test_phones.test_phones_on_homepage">
+  <component name="RunManager" selected="Python tests.py.test for test.test_compare_displayed_person_data.test_phones_on_homepage">
     <configuration default="false" name="py.test in test_del_first_person.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -329,7 +332,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="py.test in test_phones.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="py.test in test_compare_displayed_person_data.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -341,11 +344,11 @@
       <module name="python_training" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_phones.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_compare_displayed_person_data.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="py.test for test_phones.test_phones_on_homepage" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="py.test for test.test_compare_displayed_person_data.test_phones_on_homepage" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -357,7 +360,7 @@
       <module name="python_training" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_phones.test_phones_on_homepage&quot;" />
+      <option name="_new_target" value="&quot;test.test_compare_displayed_person_data.test_phones_on_homepage&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method />
     </configuration>
@@ -495,13 +498,13 @@
       <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_del_first_person.py" />
       <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_del_person.py" />
       <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_edit_person.py" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.py.test in test_phones.py" />
-      <item index="6" class="java.lang.String" itemvalue="Python tests.py.test for test_phones.test_phones_on_homepage" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.py.test in test_compare_displayed_person_data.py" />
+      <item index="6" class="java.lang.String" itemvalue="Python tests.py.test for test.test_compare_displayed_person_data.test_phones_on_homepage" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test for test_phones.test_phones_on_homepage" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_phones.py" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test for test.test_compare_displayed_person_data.test_phones_on_homepage" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_compare_displayed_person_data.py" />
         <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_edit_person.py" />
         <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_del_person.py" />
         <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_del_first_person.py" />
@@ -750,18 +753,25 @@
       <option name="project" value="LOCAL" />
       <updated>1581019542681</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Реализованы обратные проверки телефонов&#10;&#10;Обратные проверки для телефонов на главной странице и на форме редактирования контактов">
+      <created>1581622875252</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1581622875252</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TestHistory">
     <history-entry file="py_test_for_test_phones_test_phones_on_homepage - 2020.02.13 at 22h 32m 49s.xml">
       <configuration name="py.test for test_phones.test_phones_on_homepage" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_phones_py - 2020.02.12 at 23h 49m 29s.xml">
-      <configuration name="py.test in test_phones.py" configurationId="tests" />
+    <history-entry file="py_test_for_test_test_compare_displayed_person_data_test_phones_on_homepage - 2020.02.13 at 23h 11m 01s.xml">
+      <configuration name="py.test for test.test_compare_displayed_person_data.test_phones_on_homepage" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_phones_py - 2020.02.12 at 23h 59m 30s.xml">
-      <configuration name="py.test in test_phones.py" configurationId="tests" />
+    <history-entry file="py_test_for_test_test_compare_displayed_person_data_test_phones_on_homepage - 2020.02.13 at 23h 11m 38s.xml">
+      <configuration name="py.test for test.test_compare_displayed_person_data.test_phones_on_homepage" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_test_phones_py - 2020.02.13 at 21h 45m 48s.xml">
       <configuration name="py.test in test_phones.py" configurationId="tests" />
@@ -813,7 +823,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Перенесен тест добавления контакта" />
     <MESSAGE value="Добавление контакта&#10;&#10;Заполнение данных контакта ведется рандомным способом" />
     <MESSAGE value="Ссылка на драйвер вынесена во вспомогательные методы" />
     <MESSAGE value="Вспомогательные методы вынесены в класс Application" />
@@ -838,7 +847,8 @@
     <MESSAGE value="Добавлено кеширование списка контактов" />
     <MESSAGE value="ТЕперь удаляется и модифицируется случайная группа" />
     <MESSAGE value="Теперь удаляется и модифицируется случайный контакт" />
-    <option name="LAST_COMMIT_MESSAGE" value="Теперь удаляется и модифицируется случайный контакт" />
+    <MESSAGE value="Реализованы обратные проверки телефонов&#10;&#10;Обратные проверки для телефонов на главной странице и на форме редактирования контактов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализованы обратные проверки телефонов&#10;&#10;Обратные проверки для телефонов на главной странице и на форме редактирования контактов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1115,16 +1125,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_del_person.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding>
-            <element signature="e#24#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_edit_group.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1178,28 +1178,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/person.py">
+    <entry file="file://$PROJECT_DIR$/test/test_del_person.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="9" selection-end-column="39" />
+          <folding>
+            <element signature="e#24#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_compare_displayed_person_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fixture/person.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="129" column="52" lean-forward="true" selection-start-line="129" selection-start-column="52" selection-end-line="129" selection-end-column="52" />
+        <state relative-caret-position="102">
+          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
           <folding>
             <element signature="e#25#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_phones.py">
+    <entry file="file://$PROJECT_DIR$/model/person.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="27" />
+        <state relative-caret-position="-119">
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding />
         </state>
       </provider>
