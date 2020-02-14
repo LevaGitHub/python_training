@@ -50,3 +50,35 @@ class Person:
             return int(self.person_id)
         else:
             return maxsize
+
+    def get_data_as_string_for_log(self):
+        return ("firstname: {} \n"
+                "middlename: {}\n"
+                "lastname: {} \n"
+                "nickname: {} \n"
+                "title: {} \n"
+                "company: {}\n"
+                "address: {}\n"
+                "home: {}\n"
+                "mobile: {}\n"
+                "work: {}\n"
+                "fax: {}\n"
+                "email: {}\n"
+                "email2: {}\n"
+                "email3: {}\n"
+                "homepage: {}\n"
+                "bday: {}\n"
+                "bmonth: {}\n"
+                "byear: {}\n"
+                "aday: {}\n"
+                "amonth: {}\n"
+                "ayear: {}\n"
+                "address2: {}\n"
+                "phone2: {}\n"
+                "notes: {}\n"
+                "person_id: {}\n"
+                ).format(self.firstname, self.middlename, self.lastname, self.nickname, self.title,
+                         self.company, self.address, self.home, self.mobile, self.work, self.fax,
+                         self.email, self.email2, self.email3, self.homepage, self.bday, self.bmonth,
+                         self.byear, self.aday, self.amonth, self.ayear, self.address2, self.phone2, self.notes,
+                         self.person_id)
