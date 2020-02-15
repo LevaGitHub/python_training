@@ -1,18 +1,16 @@
 # -*- coding: utf-8 -*-
 
 from model.group import Group
-from fixture.general import generate_sequence
+import fixture.general as general
 import pytest
-import random
-import string
 
-test_seq = string.ascii_letters + string.digits + string.punctuation + " " * 10
+person_count = 3
 
 test_data = [
-    Group(name=name, header=header, footer=footer)
-    for name in ["", generate_sequence(random.randrange(10), test_seq, prefix='name')]
-    for header in ["", generate_sequence(random.randrange(20), test_seq, prefix='header')]
-    for footer in ["", generate_sequence(random.randrange(30), test_seq, prefix='footer')]
+    Group(name=general.generate_sequence(20, general.test_seq, prefix='name'),
+          header=general.generate_sequence(20, general.test_seq, prefix='header'),
+          footer=general.generate_sequence(20, general.test_seq, prefix='footer'))
+    for _ in range(person_count)
 ]
 
 
