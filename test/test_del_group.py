@@ -1,20 +1,20 @@
 # -*- coding: utf-8 -*-
 
 from model.group import Group
-from random import randrange
+import random
 
 
-def checking_preconditions_before_delete(app):
-    if app.group.count() == 0:
+def checking_preconditions_before_delete(app, db):
+    if len(db.get_group_list()) == 0:
         app.group.create(Group(name='for_delete'))
 
 
-def test_delete_some_group(app):
-    checking_preconditions_before_delete(app)
-    old_groups = app.group.get_group_list()
-    index = randrange(len(old_groups))
-    app.group.delete_group_by_index(index)
-    assert len(old_groups) - 1 == app.group.count()
-    new_groups = app.group.get_group_list()
-    old_groups[index:index + 1] = []
+def test_delete_some_group(app, db):
+    checking_preconditions_before_delete(app, db)
+    old_groups = db.get_group_list()
+    group = random.choice(old_groups)
+    app.group.delete_group_by_id(group.id)
+    new_groups = db.get_group_list()
+    assert len(old_groups) - 1 == len(new_groups)
+    old_groups.remove(group)
     assert old_groups == new_groups
