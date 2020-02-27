@@ -7,7 +7,7 @@ months = ["January", "February", "March", "April", "May", "June", "July", "Augus
 years = [i for i in range(1970, 2000)]
 
 
-test_seq = string.ascii_letters + string.digits + " " * 10
+test_seq = string.ascii_letters + string.digits + " "
 
 
 def generate_sequence(size, seq, prefix=''):
