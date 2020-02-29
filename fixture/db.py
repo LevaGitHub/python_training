@@ -38,5 +38,22 @@ class DbFixture:
             cursor.close()
         return l
 
+    def get_person(self, person_id):
+        cursor = self.connection.cursor()
+        pers_data_from_db = None
+        try:
+            cursor.execute("select id, firstname, lastname, address, email, email2, email3, home, mobile, work, phone2"
+                           " from addressbook where (deprecated='0000-00-00 00:00:00' and id={})".format(person_id))
+            for row in cursor:
+                (id, firstname, lastname, address, email, email2, email3, home, mobile, work, phone2) = row
+                pers_data_from_db = (Person(person_id=str(id), firstname=firstname, lastname=lastname, address=address,
+                                            email=email, email2=email2, email3=email3, home=home, mobile=mobile,
+                                            work=work, phone2=phone2))
+        finally:
+            cursor.close()
+        if pers_data_from_db is None:
+            raise ValueError("Unrecognize person id - %s" % person_id)
+        return pers_data_from_db
+
     def destroy(self):
         self.connection.close()

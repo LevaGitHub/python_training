@@ -162,6 +162,25 @@ class PersonHelper:
                                                 all_emails_from_homepage=all_emails))
         return self.person_cache
 
+    def get_all_person_list_from_homepage(self):
+        wd = self.app.wd
+        self.open_all_person_page()
+        all_person_list = []
+        rows = wd.find_elements_by_name("entry")
+        for each in rows:
+            columns = each.find_elements_by_css_selector("td")
+            column_id = columns[0]
+            person_id = column_id.find_element_by_name('selected[]').get_attribute("value")
+            lastname = columns[1].text
+            firstname = columns[2].text
+            address = columns[3].text
+            all_emails = columns[4].text
+            all_phones = columns[5].text
+            all_person_list.append(Person(firstname=firstname, lastname=lastname, person_id=person_id,
+                                          all_phones_from_homepage=all_phones, address=address,
+                                          all_emails_from_homepage=all_emails))
+        return all_person_list
+
     def get_person_info_from_edit_page(self, index):
         wd = self.app.wd
         self.open_person_to_edit_by_index(index)
