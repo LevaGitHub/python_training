@@ -109,6 +109,7 @@ class PersonHelper:
     person_cache = None
 
     def get_person_list(self):
+        print("Выполняется получение списка контактов из интерфейса")
         if self.person_cache is None:
             wd = self.app.wd
             self.open_all_person_page()

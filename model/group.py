@@ -21,3 +21,9 @@ class Group:
             return int(self.id)
         else:
             return maxsize
+
+    def edit(self, new_group_data):
+        self.name = new_group_data.name if new_group_data.name is not None else self.name
+        self.header = new_group_data.header if new_group_data.header is not None else self.header
+        self.footer = new_group_data.footer if new_group_data.footer is not None else self.footer
+        self.id = new_group_data.id if new_group_data.id is not None else self.id

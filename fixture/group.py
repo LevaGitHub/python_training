@@ -37,6 +37,16 @@ class GroupHelper:
         self.return_to_groups_page()
         self.group_cache = None
 
+    def edit_group_by_id(self, edited_group):
+        wd = self.app.wd
+        self.open_groups_page()
+        self.select_group_by_id(edited_group.id)
+        wd.find_element_by_name("edit").click()
+        self.input_group_data(edited_group)
+        wd.find_element_by_name("update").click()
+        self.return_to_groups_page()
+        self.group_cache = None
+
     def delete_first_group(self):
         self.delete_group_by_index(index=0)
 
@@ -85,6 +95,7 @@ class GroupHelper:
     group_cache = None
 
     def get_group_list(self):
+        print("Выполняется получение списка групп из интерфейса")
         if self.group_cache is None:
             wd = self.app.wd
             self.open_groups_page()
