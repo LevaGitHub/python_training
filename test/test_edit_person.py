@@ -1,12 +1,16 @@
 import string
 import fixture.general as general
 from model.person import Person
-from random import randrange
+import random
 
 
-def test_edit_person(app):
-    if app.person.count() == 0:
+def checking_preconditions_before_delete(app, db):
+    if len(db.get_person_list()) == 0:
         app.person.create(Person(firstname='please', middlename='edit', lastname='me'))
+
+
+def test_edit_person(app, db, check_ui):
+    checking_preconditions_before_delete(app, db)
     pers = Person(firstname=general.generate_sequence(20, string.ascii_letters),
                   middlename=general.generate_sequence(20, string.ascii_letters),
                   lastname=general.generate_sequence(20, string.ascii_letters),
@@ -31,11 +35,15 @@ def test_edit_person(app):
                   address2=general.generate_sequence(20, string.ascii_letters),
                   phone2=general.generate_sequence(11, string.digits),
                   notes=general.generate_sequence(50, string.ascii_letters))
-    old_persons = app.person.get_person_list()
-    index = randrange(len(old_persons))
-    pers.person_id = old_persons[index].person_id
-    app.person.edit_person_by_index(index, pers)
-    assert len(old_persons) == app.person.count()
-    new_persons = app.person.get_person_list()
-    old_persons[index] = pers
+    old_persons = db.get_person_list()
+    edit_person = random.choice(old_persons)
+    pers.person_id = edit_person.person_id
+    app.person.edit_person_by_id(pers)
+    new_persons = db.get_person_list()
+    assert len(old_persons) == len(new_persons)
+    old_persons.remove(edit_person)
+    edit_person.edit(pers)
+    old_persons.append(edit_person)
     assert sorted(old_persons, key=Person.id_or_max) == sorted(new_persons, key=Person.id_or_max)
+    if check_ui:
+        assert sorted(new_persons, key=Person.id_or_max) == sorted(app.person.get_person_list(), key=Person.id_or_max)

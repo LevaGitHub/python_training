@@ -7,9 +7,12 @@ import re
 def get_edit_button_name(index):
     if index == 0:
         return "// img[ @ alt = 'Edit']"
+        # "edit.php?id=43"
     else:
         return "(// img[ @ alt = 'Edit'])[{}]".format(index+1)
 
+def get_edit_button_name_by_id(id):
+    return "edit.php?id={}".format(id)
 
 def get_view_button_name(index):
     if index == 0:
@@ -76,13 +79,43 @@ class PersonHelper:
         self.open_all_person_page()
         self.person_cache = None
 
+    def delete_person_by_id(self, id):
+        wd = self.app.wd
+        self.open_all_person_page()
+        if self.open_person_by_id(id):
+            wd.find_element_by_xpath("(//input[@name='update'])[3]").click()
+        else:
+            raise LookupError("Person don`t deleted. Edit button not found")
+        self.open_all_person_page()
+        self.person_cache = None
+
     def select_person_by_index(self, index):
         wd = self.app.wd
         wd.find_element_by_xpath(get_edit_button_name(index)).click()
 
+    def open_person_by_id(self, id):
+        wd = self.app.wd
+        rows = wd.find_elements_by_name("entry")
+        for each in rows:
+            columns = each.find_elements_by_css_selector("td")
+            column_id = columns[0]
+            person_id = column_id.find_element_by_name('selected[]').get_attribute("value")
+            if person_id == id:
+                edit_btn_col = columns[7]
+                edit_btn_col.click()
+                return True
+
     def edit_person_by_index(self, index, edited_person):
         wd = self.app.wd
         self.open_person_to_edit_by_index(index)
+        self.input_person_data(edited_person)
+        wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
+        self.open_all_person_page()
+        self.person_cache = None
+
+    def edit_person_by_id(self, edited_person):
+        wd = self.app.wd
+        self.open_person_by_id(edited_person.person_id)
         self.input_person_data(edited_person)
         wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
         self.open_all_person_page()

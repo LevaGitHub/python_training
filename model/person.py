@@ -82,3 +82,29 @@ class Person:
                          self.email, self.email2, self.email3, self.homepage, self.bday, self.bmonth,
                          self.byear, self.aday, self.amonth, self.ayear, self.address2, self.phone2, self.notes,
                          self.person_id)
+
+    def edit(self, new_person_data):
+        self.firstname = new_person_data.firstname if new_person_data.firstname is not None else self.firstname
+        self.middlename = new_person_data.middlename if new_person_data.middlename is not None else self.middlename
+        self.lastname = new_person_data.lastname if new_person_data.lastname is not None else self.lastname
+        self.nickname = new_person_data.nickname if new_person_data.nickname is not None else self.nickname
+        self.title = new_person_data.title if new_person_data.title is not None else self.title
+        self.company = new_person_data.company if new_person_data.company is not None else self.company
+        self.address = new_person_data.address if new_person_data.address is not None else self.address
+        self.home = new_person_data.home if new_person_data.home is not None else self.home
+        self.mobile = new_person_data.mobile if new_person_data.mobile is not None else self.mobile
+        self.work = new_person_data.work if new_person_data.work is not None else self.work
+        self.fax = new_person_data.fax if new_person_data.fax is not None else self.fax
+        self.email = new_person_data.email if new_person_data.email is not None else self.email
+        self.email2 = new_person_data.email2 if new_person_data.email2 is not None else self.email2
+        self.email3 = new_person_data.email3 if new_person_data.email3 is not None else self.email3
+        self.homepage = new_person_data.homepage if new_person_data.homepage is not None else self.homepage
+        self.bday = new_person_data.bday if new_person_data.bday is not None else self.bday
+        self.bmonth = new_person_data.bmonth if new_person_data.bmonth is not None else self.bmonth
+        self.byear = new_person_data.byear if new_person_data.byear is not None else self.byear
+        self.aday = new_person_data.aday if new_person_data.aday is not None else self.aday
+        self.amonth = new_person_data.amonth if new_person_data.amonth is not None else self.amonth
+        self.ayear = new_person_data.ayear if new_person_data.ayear is not None else self.ayear
+        self.address2 = new_person_data.address2 if new_person_data.address2 is not None else self.address2
+        self.phone2 = new_person_data.phone2 if new_person_data.phone2 is not None else self.phone2
+        self.notes = new_person_data.notes if new_person_data.notes is not None else self.notes
