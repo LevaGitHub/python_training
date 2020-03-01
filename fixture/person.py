@@ -227,7 +227,7 @@ class PersonHelper:
                       work=work,
                       phone2=phone2)
 
-    def add_person_to_group(self, person, group_name):
+    def add_group_to_person(self, person, group_name):
         wd = self.app.wd
         self.open_all_person_page()
         self.select_person_by_id(person.person_id)
@@ -235,3 +235,13 @@ class PersonHelper:
         time.sleep(1)
         wd.find_element_by_xpath("(//input[@name='add'])").click()
         self.open_all_person_page()
+        time.sleep(1)
+
+    def delete_group_from_person(self, person, group):
+        wd = self.app.wd
+        self.open_all_person_page()
+        wd.find_element_by_xpath("//option[@value='{}']".format(group.id)).click()
+        self.select_person_by_id(person.person_id)
+        wd.find_element_by_xpath("(//input[@name='remove'])").click()
+        self.open_all_person_page()
+        time.sleep(1)
