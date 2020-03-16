@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b275ddd2-9dac-4aa5-95b8-c42644fad2f5" name="Default" comment="">
+    <list default="true" id="b275ddd2-9dac-4aa5-95b8-c42644fad2f5" name="Default" comment="Добавлены bdd тесты групп">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -231,13 +231,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578948690798</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Передача параметров в методы&#10;&#10;Передаются параметры в методы авторизаци и создания группы">
-      <created>1579121382111</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1579121382111</updated>
     </task>
     <task id="LOCAL-00007" summary="Добавлен тест создания группы с пустыми значениями">
       <created>1579121417776</created>
@@ -575,11 +568,17 @@
       <option name="project" value="LOCAL" />
       <updated>1584381526939</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Добавлены bdd тесты групп">
+      <created>1584387363744</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1584387363745</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавлено кеширование списка групп" />
     <MESSAGE value="Добавлено кеширование списка контактов" />
     <MESSAGE value="ТЕперь удаляется и модифицируется случайная группа" />
     <MESSAGE value="Теперь удаляется и модифицируется случайный контакт" />
@@ -604,9 +603,14 @@
     <MESSAGE value="Добавлен тест удаления группы из контакта" />
     <MESSAGE value="Добавлен файл со списком библиотек. Для Jenkins" />
     <MESSAGE value="Добавлены ошибочные данные для теста создания групп" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены ошибочные данные для теста создания групп" />
+    <MESSAGE value="Добавлены bdd тесты групп" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены bdd тесты групп" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="346" y="0" key="CommitChangelistDialog2" timestamp="1584387361862">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="0" key="CommitChangelistDialog2/0.0.1366.728/-1920.-304.1920.1040@0.0.1366.728" timestamp="1584387361862" />
     <state width="1345" height="185" key="GridCell.Tab.0.bottom" timestamp="1584386960888">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -627,6 +631,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728/-1920.-304.1920.1040@0.0.1366.728" timestamp="1584384308000" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1584387370877">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-1920.-304.1920.1040@0.0.1366.728" timestamp="1584387370877" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
