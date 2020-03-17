@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b275ddd2-9dac-4aa5-95b8-c42644fad2f5" name="Default" comment="Добавлены bdd тесты групп">
+    <list default="true" id="b275ddd2-9dac-4aa5-95b8-c42644fad2f5" name="Default" comment="Добавлены скрины отчетов и настроек Jenkins">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add_group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +54,7 @@
       <recent name="C:\Scripts\python_training\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for bdd.group_scenarios.test_delete_group">
+  <component name="RunManager" selected="Python tests.py.test in test_add_group.py">
     <configuration default="true" type="tests" factoryName="Nosetests">
       <module name="python_training" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -231,13 +233,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578948690798</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Добавлен тест создания группы с пустыми значениями">
-      <created>1579121417776</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1579121417776</updated>
     </task>
     <task id="LOCAL-00008" summary="Перенесен тест добавления контакта">
       <created>1579297126790</created>
@@ -575,11 +570,17 @@
       <option name="project" value="LOCAL" />
       <updated>1584387363745</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Добавлены скрины отчетов и настроек Jenkins">
+      <created>1584388582477</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1584388582477</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавлено кеширование списка контактов" />
     <MESSAGE value="ТЕперь удаляется и модифицируется случайная группа" />
     <MESSAGE value="Теперь удаляется и модифицируется случайный контакт" />
     <MESSAGE value="Реализованы обратные проверки телефонов&#10;&#10;Обратные проверки для телефонов на главной странице и на форме редактирования контактов" />
@@ -604,37 +605,38 @@
     <MESSAGE value="Добавлен файл со списком библиотек. Для Jenkins" />
     <MESSAGE value="Добавлены ошибочные данные для теста создания групп" />
     <MESSAGE value="Добавлены bdd тесты групп" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены bdd тесты групп" />
+    <MESSAGE value="Добавлены скрины отчетов и настроек Jenkins" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены скрины отчетов и настроек Jenkins" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="346" y="0" key="CommitChangelistDialog2" timestamp="1584387361862">
+    <state x="346" y="0" key="CommitChangelistDialog2" timestamp="1584388580798">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="0" key="CommitChangelistDialog2/0.0.1366.728/-1920.-304.1920.1040@0.0.1366.728" timestamp="1584387361862" />
-    <state width="1345" height="185" key="GridCell.Tab.0.bottom" timestamp="1584386960888">
+    <state x="346" y="0" key="CommitChangelistDialog2/0.0.1366.728/-1920.-304.1920.1040@0.0.1366.728" timestamp="1584388580798" />
+    <state width="1345" height="185" key="GridCell.Tab.0.bottom" timestamp="1584389616340">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.-304.1920.1040@0.0.1366.728" timestamp="1584386960888" />
-    <state width="1345" height="185" key="GridCell.Tab.0.center" timestamp="1584386960887">
+    <state width="1345" height="185" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.-304.1920.1040@0.0.1366.728" timestamp="1584389616340" />
+    <state width="1345" height="185" key="GridCell.Tab.0.center" timestamp="1584389616340">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.center/0.0.1366.728/-1920.-304.1920.1040@0.0.1366.728" timestamp="1584386960887" />
-    <state width="1345" height="185" key="GridCell.Tab.0.left" timestamp="1584386960886">
+    <state width="1345" height="185" key="GridCell.Tab.0.center/0.0.1366.728/-1920.-304.1920.1040@0.0.1366.728" timestamp="1584389616340" />
+    <state width="1345" height="185" key="GridCell.Tab.0.left" timestamp="1584389616340">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.left/0.0.1366.728/-1920.-304.1920.1040@0.0.1366.728" timestamp="1584386960886" />
-    <state width="1345" height="185" key="GridCell.Tab.0.right" timestamp="1584386960888">
+    <state width="1345" height="185" key="GridCell.Tab.0.left/0.0.1366.728/-1920.-304.1920.1040@0.0.1366.728" timestamp="1584389616340" />
+    <state width="1345" height="185" key="GridCell.Tab.0.right" timestamp="1584389616340">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.right/0.0.1366.728/-1920.-304.1920.1040@0.0.1366.728" timestamp="1584386960888" />
+    <state width="1345" height="185" key="GridCell.Tab.0.right/0.0.1366.728/-1920.-304.1920.1040@0.0.1366.728" timestamp="1584389616340" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1584384308000">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728/-1920.-304.1920.1040@0.0.1366.728" timestamp="1584384308000" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1584387370877">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1584388588510">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-1920.-304.1920.1040@0.0.1366.728" timestamp="1584387370877" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-1920.-304.1920.1040@0.0.1366.728" timestamp="1584388588510" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

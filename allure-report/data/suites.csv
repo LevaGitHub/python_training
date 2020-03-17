@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Mar 17 23:33:44 MSK 2020","Tue Mar 17 23:33:45 MSK 2020","1710","test","test_add_group","","","","test_add_group[None namedPhtykwuTiHhYYtfMcm  headerhpZ44x  qgsIhoN1dn7Y footerq2S7S z fPR PEifl tW]",""
+"passed","Tue Mar 17 23:33:45 MSK 2020","Tue Mar 17 23:33:47 MSK 2020","1407","test","test_add_group","","","","test_add_group[None name TzfnSS NC9U Y0nJzo5 headerz spPe6m0B6xv r6o7Ut footerG9  rO8ZaH AwINFzFxC]",""
+"passed","Tue Mar 17 23:33:47 MSK 2020","Tue Mar 17 23:33:48 MSK 2020","1446","test","test_add_group","","","","test_add_group[None nameLpJY8  JHI pOxOw sBx2` headerhupPRr MVb78 5 XkBQ  footerg N BILeeb DXTpDjz0V]",""
